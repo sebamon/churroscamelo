@@ -1,10 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../src/styles/Home.module.css'
+import Navbar from './navbar'
+import Footer from 'footer'
 
-export default function Home(data) {
-  console.log(data)
-  return (
+return (
     <div className={styles.container}>
       <Head>
         <title>Churros Camelô</title>
@@ -19,17 +16,13 @@ export default function Home(data) {
         <h2 className={styles.description}>
           Los más ricos de la Patagonia
         </h2>
+
         
       </main>
-    </div>
-  )
-}
 
-export async function getStaticProps () {
-  const data = {
-    nombre: 'Churros'
-  }
-  return {
-    props : data
-  }
-}
+      <Footer props>
+
+      </Footer>
+      
+    </div>
+)
